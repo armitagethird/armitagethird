@@ -70,7 +70,7 @@ Fundador da **[Saraiva Co.](https://saraivaco.com.br)** — estúdio de design w
 | Projeto | Descrição | Stack |
 |---|---|---|
 | 🌐 **Saraiva Co.** | Estúdio de design web — sites para profissionais | HTML · CSS · JS |
-| 🐾 **VetRecord** | SaaS com IA para prontuários veterinários | Web App · AI |
+| 🐾 **ProntuVet Ai** | SaaS com IA para prontuários veterinários | Web App · AI |
 
 ---
 
