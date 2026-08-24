@@ -61,7 +61,7 @@ Também construo camadas de **IA com orquestração** — LLMs integradas a APIs
  
 | Projeto | O que é | Stack |
 |:--|:--|:--|
-| **[PedroRED](#)** | *(descreva em 1 linha o problema que resolve)* | Java · Spring Boot · JPA |
+| **[PedroRED](#)** | Gestão completa da oficina com loja integrada e landing page num monolíto | Java · Spring Boot · JPA |
 | **[API de Agendamentos](#)** | API REST de agendamentos com cobertura de testes | Java · Spring Boot · JPA · JUnit 5 · Mockito |
  
 ---
