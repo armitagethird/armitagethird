@@ -1,169 +1,152 @@
-<div align="center">
+# Romero Saraiva
 
-<img src="https://media1.tenor.com/m/STlYYOUVenUAAAAd/anime-armitage-iii-dual-matrix.gif" width="260" />
+**Backend Java / Spring Boot · sistemas que tiram trabalho manual de negócios reais**
 
-### Romero Saraiva · `ArmitageThird`
+São Luís, MA · remoto
 
-**Desenvolvedor Backend Java** — Spring Boot · Spring Data JPA · PostgreSQL · Flyway · Docker
-
-[![VibeSurf Dev](https://img.shields.io/badge/vibesurfdev.com-0a0000?style=flat-square&logo=googlechrome&logoColor=ff4b14&labelColor=1a0500)](https://vibesurfdev.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0a0000?style=flat-square&logo=linkedin&logoColor=ff4b14&labelColor=1a0500)](https://www.linkedin.com/in/romero-saraiva-ba315b345/)
-[![Email](https://img.shields.io/badge/Email-0a0000?style=flat-square&logo=gmail&logoColor=ff4b14&labelColor=1a0500)](mailto:romerosaraiva4@gmail.com)
-
-</div>
+[![VibeSurf Dev](https://img.shields.io/badge/VibeSurf_Dev-000000?style=flat&logo=vercel&logoColor=white)](https://vibesurfdev.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/romero-saraiva)
+[![E-mail](https://img.shields.io/badge/E--mail-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:SEU_EMAIL_AQUI)
 
 ---
 
-## `> whoami`
+### `> whoami`
 
-Backend em **Java + Spring Boot**. Construo APIs REST em arquitetura de camadas, com persistência via **Spring Data JPA** sobre **PostgreSQL** e schema versionado em **Flyway** — migrations em SQL, `ddl-auto=validate`, sem o Hibernate improvisando o banco.
+Construo sistemas que tiram trabalho manual das costas de quem toca um negócio.
 
-Antes de virar a chave para o Java, entreguei **sites e sistemas para clientes reais** — consultórios médicos, transportadora e rede de hospedagem. O maior deles, o sistema de gestão da **[Garagem PedroRED](https://pedrored.com.br)**, está **em produção hoje**, com cliente pagante e domínio próprio. Isso continua ali embaixo: prazo, escopo e alguém do outro lado dependendo do sistema no ar.
+Meu principal projeto é o **sistema de gestão da clínica da Dra. Kerly Helena**, em Java 21 + Spring Boot 4. Ele está **em produção desde outubro de 2026**, com agenda, financeiro e automações de WhatsApp que a equipe usa todo dia. Construí e mantenho o sistema, e ele foi do primeiro commit à produção em 22 dias.
 
-> *"Não estou chegado — estou chegando."*
-
----
-
-## `> cat pom.xml`
-
-```xml
-<project>
-  <groupId>dev.vibesurf</groupId>
-  <artifactId>romero-saraiva</artifactId>
-  <version>2026.1.0</version>
-
-  <properties>
-    <java.version>17</java.version>
-    <spring-boot.version>4.1.1</spring-boot.version>
-  </properties>
-
-  <dependencies>
-    <dependency>spring-boot-starter-webmvc</dependency>
-    <dependency>spring-boot-starter-data-jpa</dependency>
-    <dependency>spring-boot-starter-flyway</dependency>
-    <dependency>postgresql</dependency>
-
-    <!-- em construção, chegando nesta ordem:
-    <dependency>spring-boot-starter-security</dependency>
-    <dependency>spring-boot-starter-test</dependency>
-    <dependency>spring-ai</dependency>
-    -->
-  </dependencies>
-</project>
-```
+Antes do Java, entreguei sites e dashboards para clientes reais pela minha agência, a [VibeSurf Dev](https://vibesurfdev.com).
 
 ---
 
-## `> stack --list`
+### `> ls producao/`
 
-| | |
-|:--|:--|
-| **`backend`** | ![Java](https://img.shields.io/badge/Java%2017-0a0000?style=flat-square&logo=openjdk&logoColor=ff4b14&labelColor=1a0500) ![Spring Boot](https://img.shields.io/badge/Spring%20Boot%204-0a0000?style=flat-square&logo=springboot&logoColor=ff4b14&labelColor=1a0500) ![Spring Data JPA](https://img.shields.io/badge/Spring%20Data%20JPA-0a0000?style=flat-square&logo=spring&logoColor=ff4b14&labelColor=1a0500) ![Hibernate](https://img.shields.io/badge/Hibernate-0a0000?style=flat-square&logo=hibernate&logoColor=ff4b14&labelColor=1a0500) |
-| **`dados`** | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0a0000?style=flat-square&logo=postgresql&logoColor=ff4b14&labelColor=1a0500) ![Flyway](https://img.shields.io/badge/Flyway-0a0000?style=flat-square&logo=flyway&logoColor=ff4b14&labelColor=1a0500) ![SQL](https://img.shields.io/badge/SQL-0a0000?style=flat-square&logo=postgresql&logoColor=ff4b14&labelColor=1a0500) |
-| **`tools`** | ![Maven](https://img.shields.io/badge/Maven-0a0000?style=flat-square&logo=apachemaven&logoColor=ff4b14&labelColor=1a0500) ![Docker](https://img.shields.io/badge/Docker%20Compose-0a0000?style=flat-square&logo=docker&logoColor=ff4b14&labelColor=1a0500) ![Git](https://img.shields.io/badge/Git-0a0000?style=flat-square&logo=git&logoColor=ff4b14&labelColor=1a0500) ![IntelliJ](https://img.shields.io/badge/IntelliJ-0a0000?style=flat-square&logo=intellijidea&logoColor=ff4b14&labelColor=1a0500) |
-| **`front`** | ![TypeScript](https://img.shields.io/badge/TypeScript-0a0000?style=flat-square&logo=typescript&logoColor=ff4b14&labelColor=1a0500) ![React Router](https://img.shields.io/badge/React%20Router%207-0a0000?style=flat-square&logo=reactrouter&logoColor=ff4b14&labelColor=1a0500) ![Vite](https://img.shields.io/badge/Vite-0a0000?style=flat-square&logo=vite&logoColor=ff4b14&labelColor=1a0500) ![Astro](https://img.shields.io/badge/Astro-0a0000?style=flat-square&logo=astro&logoColor=ff4b14&labelColor=1a0500) |
+#### Sistema da Clínica Dra. Kerly Helena
 
----
+`em produção desde 10/2026` · `203 classes` · `2.167 testes` · `51 migrations` · `9 jobs agendados`
 
-## `> ls java/` — o que estou construindo
+Sistema de gestão para uma clínica de medicina integrativa em São Luís. Três perfis (médica, assistente e administrador), cada pessoa com o próprio acesso.
 
-| Projeto | O que é | Destaque técnico |
-|:--|:--|:--|
-| **[Geladeira API](https://github.com/ArmitageThird/backend-geladeira-java-springboot)** | API REST de controle de alimentos | Regra de negócio no service: cadastrar item já existente **soma a quantidade** e preserva a validade mais próxima de vencer. `CHECK` no banco e `ddl-auto=validate` |
-| **[API de Agendamentos](https://github.com/ArmitageThird/backend-agendamentos-java-springboot)** | API REST de agendamentos | **Docker Compose** subindo PostgreSQL 18 · duas migrations Flyway versionadas, incluindo correção de tipo de coluna |
-| **[clinica-vet](https://github.com/ArmitageThird/clinica-vet)** | Laboratório de fundamentos Java e SQL | POO, collections, exceções e consultas — o alicerce, exposto de propósito |
+**Dores que o sistema resolveu**
 
----
+| Antes | Depois |
+|---|---|
+| Em 17 dias, 13 pacientes mandaram 28 mensagens com dúvidas (como a localização) para o número de avisos, que ninguém monitora | O sistema espera a paciente terminar de escrever e responde pelo assunto: localização com pino, data da consulta, pagamento, convênio, horário. **Sem IA**, de propósito: o texto da paciente não sai do servidor |
+| Saber quem vinha era vasculhar o WhatsApp | Lembrete na véspera e 2h antes em formato de **enquete** ("Confirmo" / "Preciso remarcar") e um painel do dia: confirmadas, aguardando, sem resposta, pediu remarcação |
+| O desenho inicial exigia cadastrar cada horário livre, mas a médica atende quase todo dia | A médica marca só os dias (ou turnos) em que **não** atende, inclusive vários de uma vez |
+| Risco de duas pacientes no mesmo horário | O **próprio banco** recusa horário sobreposto, mesmo com duas pessoas marcando ao mesmo tempo |
+| A receita só entrava no financeiro se alguém lembrasse de clicar | A receita é lançada sozinha quando a consulta termina |
+| Valor digitado à mão, com risco de erro | Catálogo de serviços com o valor congelado na consulta |
+| Senha compartilhada, e cancelar ou mudar valor não deixava rastro | Login por código no e-mail, acesso individual e página de atividade ("quem fez o quê") |
 
-## `> ls producao/` — entregue e no ar, com cliente do outro lado
-
-> ### 🔧 [Garagem PedroRED](https://pedrored.com.br) — sistema de gestão em produção
->
-> Sistema completo de gestão para oficina mecânica, com **loja integrada**, agenda e painel administrativo — rodando hoje para um cliente pagante, em domínio próprio.
->
-> **Operação:** deploy em **VPS** com Docker Compose e Caddy · **PostgreSQL** com schema versionado em migrations · backend em Rust/Axum, front em TypeScript.
->
-> *Repositório privado por ser sistema de cliente — o produto está no ar no link acima.*
-
-| Cliente | Entrega | Link |
-|:--|:--|:--|
-| **Dra. Kerly Helena** | site institucional, **domínio próprio** | [drakerlyhelena.com.br](https://drakerlyhelena.com.br/) |
-| **Motel Paraíso** | dashboard de operação conectado ao banco | [dashboard-motel-paraiso](https://dashboard-motel-paraiso.vercel.app) |
-| **Dr. Roberto Teixeira** — cardiologista | site de apresentação | [ver](https://armitagethird.github.io/case-Roberto-Teixeira-Cardiologista/) |
-| **Ilha Forte Transportes** | site institucional | [ver](https://armitagethird.github.io/ilhaforte/) |
-| **Daniel Hakan** | site pessoal | [ver](https://armitagethird.github.io/danielhakan-1.1/) |
-| **VibeSurf Dev** | marca e site próprios | [vibesurfdev.com](https://vibesurfdev.com) |
-
----
-
-## `> ./agora.sh`
-
-```
-[ construindo ]  APIs REST em Java 17 + Spring Boot 4 sobre PostgreSQL
-[ praticando  ]  algoritmos em Java, diariamente
-[ próximo     ]  Spring Security (JWT) · JUnit 5 + Mockito · deploy em produção
-[ meta        ]  sistema de gestão clínica em produção — desta vez em Java/Spring
-```
+**Automações no WhatsApp** (Evolution API)
+- **Paciente:** confirmação 5 min depois de marcar, lembrete na véspera (seguido do pino da clínica), lembrete 2h antes e pós-consulta com link de avaliação no Google. Nada sai entre 22h e 7h.
+- **Equipe:** 13 tipos de aviso, ligados ou desligados por pessoa, mais um resumo da agenda às 7h.
+- **Também:** despesas fixas lançadas todo mês, painel financeiro anual e um módulo de aluguéis com cobrança mensal, multa e juros e recibo em PDF enviado pelo WhatsApp.
 
 <details>
-<summary><b><code>> roadmap</code></b></summary>
-<br/>
+<summary><b>Decisões técnicas</b></summary>
 
-- [x] POO, collections e tratamento de exceções
-- [x] SQL e modelagem em PostgreSQL
-- [x] Spring Boot: REST controllers, injeção por construtor, arquitetura em camadas
-- [x] Spring Data JPA: entidades, query methods e `Optional` como contrato
-- [x] Flyway: schema versionado, `ddl-auto=validate`
-- [x] Docker Compose para o ambiente de banco
-- [ ] JPA: relacionamentos (`@OneToMany`, `@ManyToOne`) e estratégias de fetch
-- [ ] Bean Validation na borda (`@Valid`) e tratamento global de exceção
-- [ ] Testes: JUnit 5 + Mockito com cobertura real de serviço
-- [ ] Spring Security: JWT, roles e filtros customizados
-- [ ] Deploy de uma API em produção
+- **Double booking barrado no Postgres, não no Java:** coluna `tstzrange` com `EXCLUDE USING gist`. Um `if (existeConflito())` em Java sofre condição de corrida.
+- **Outbox no banco:** marcar consulta só grava a mensagem numa fila, e um job envia ao WhatsApp. Se a Evolution API estiver lenta, a consulta não trava nem se perde.
+- **Uma transação por item nos jobs** (`TransactionTemplate`): `@Transactional` em chamada interna não passa pelo proxy do Spring. Isso já causou reenvio de mensagem a cada minuto em produção, até eu corrigir.
+- **Idempotência com índice único parcial + `ON CONFLICT DO NOTHING`:** no Postgres, capturar a violação não basta, porque a transação inteira já fica abortada.
+- **Webhook fail-closed:** token comparado em tempo constante, corpo limitado a 1 MB, filtro por instância e segredos higienizados antes de gravar o evento.
+- **Login sem senha:** código de 5 dígitos guardado só como hash BCrypt, limite de tentativas por IP + e-mail e tempo de resposta igual para e-mail inexistente.
+- **Agenda esparsa:** só os dias bloqueados viram linha no banco; o resto é livre por padrão.
+- **Respostas automáticas sem LLM:** classificador por palavras com tolerância a erro de digitação (Damerau-Levenshtein), restrita aos assuntos em que ela não gera ambiguidade ("pegar" não pode virar "pagar").
+- **JVM enxuta** para rodar numa VPS de 4 GB junto com o Postgres e a Evolution API.
+- **Testes contra Postgres real**, sem H2 (o H2 não tem `tstzrange` nem `EXCLUDE`), incluindo testes de concorrência com threads.
+
+</details>
+
+**O que a produção me ensinou**
+- Uma consulta foi marcada para a pessoa errada e cancelada 15 segundos depois, mas a confirmação já tinha saído. Agora a confirmação espera 5 minutos, e cancelar nesse prazo impede o envio.
+- O número de avisos levou um bloqueio de 1 dia do WhatsApp, e decidi parar com o envio em massa. Sistema bom também é saber o que desligar.
+- A VPS ficou 4 horas fora do ar depois de uma manutenção do provedor. Corrigi a causa e coloquei backup automático para o Google Drive no mesmo dia.
+
+**Resultados**
+<!-- TODO: preencher com os números das queries de produção (consultas/mês, % de confirmação pela paciente, dúvidas respondidas) -->
+
+`Java 21` · `Spring Boot 4` · `Spring Security` · `Spring Data JPA` · `Thymeleaf` · `PostgreSQL 17` · `Flyway` · `Docker Compose` · `Caddy` · `Evolution API` · `VPS Linux`
+
+> Código privado (envolve dados de pacientes). Mostro a arquitetura e o código numa conversa.
+
+#### Clientes VibeSurf Dev
+- **Dra. Kerly Helena** · site institucional com domínio próprio (além do sistema acima)
+- **Motel Paraíso** · dashboard conectado ao banco
+- **Dr. Roberto Teixeira** · site de apresentação
+- **Ilha Forte Transportes** · site institucional
+- **Daniel Hakan** · site pessoal
+- **VibeSurf Dev** · marca e site próprios
+
+---
+
+### `> stack --list`
+
+**Backend**
+![Java](https://img.shields.io/badge/Java_21-ED8B00?style=flat&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat&logo=springboot&logoColor=white)
+![Spring Security](https://img.shields.io/badge/Spring_Security-6DB33F?style=flat&logo=springsecurity&logoColor=white)
+![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=flat&logo=hibernate&logoColor=white)
+![Thymeleaf](https://img.shields.io/badge/Thymeleaf-005F0F?style=flat&logo=thymeleaf&logoColor=white)
+
+**Dados**
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
+![Flyway](https://img.shields.io/badge/Flyway-CC0200?style=flat&logo=flyway&logoColor=white)
+
+**Infra e ferramentas**
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![Caddy](https://img.shields.io/badge/Caddy-1F88C0?style=flat&logo=caddy&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
+![Maven](https://img.shields.io/badge/Maven-C71A36?style=flat&logo=apachemaven&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=flat&logo=intellijidea&logoColor=white)
+
+**Front**
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=flat&logo=reactrouter&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
+![Astro](https://img.shields.io/badge/Astro-BC52EE?style=flat&logo=astro&logoColor=white)
+
+---
+
+### `> ls java/`
+
+| Projeto | O que mostra |
+|---|---|
+| [backend-agendamentos-java-springboot](https://github.com/armitagethird/backend-agendamentos-java-springboot) | API REST de agendamentos com bloqueio de horário sobreposto, ciclo de status (AGENDADO → CONCLUÍDO / CANCELADO), PostgreSQL 18 via Docker Compose e migrations Flyway |
+| [backend-geladeira-java-springboot](https://github.com/armitagethird/backend-geladeira-java-springboot) | CRUD bem feito: soma a quantidade de itens repetidos, mantém a validade mais próxima e garante a regra com `CHECK` no banco |
+
+---
+
+### `> ls rust/`
+
+Ferramentas que fiz para o meu próprio dia a dia:
+
+| Projeto | O que é |
+|---|---|
+| [ClaudeCodeHUD](https://github.com/armitagethird/ClaudeCodeHUD) | HUD para o Claude Code CLI |
+| [NoProcrastination](https://github.com/armitagethird/NoProcrastination) | App para fazer o que precisa ser feito |
+| [acentorust](https://github.com/armitagethird/acentorust) | Clone minimalista do Acento Rápido do PowerToys |
+
+---
+
+### `> ./agora.sh`
+
+- [x] Java + Spring Boot + JPA + PostgreSQL + Flyway
+- [x] Sistema em produção com cliente ativo (Docker Compose, Caddy, VPS)
+- [x] Spring Security: perfis de acesso, login por código, CSRF, limite de tentativas
+- [x] Testes com JUnit 5 e MockMvc contra Postgres real
+- [ ] CI/CD com GitHub Actions
 - [ ] Orquestração de LLM em Java (Spring AI, RAG, agents)
-
-</details>
-
----
-
-<div align="center">
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=ArmitageThird&show_icons=true&rank_icon=github&hide_title=true&bg_color=0a0000&border_color=3d0000&icon_color=ff4b14&text_color=ffaaaa&cache_seconds=86400" />
-</div>
+- [ ] ServiceNow: retomando os estudos (Now Pro / CSA)
 
 ---
 
-<details>
-<summary><b><code>> history | grep -i "rust"</code></b></summary>
-<br/>
+### `> sobre IA`
 
-Antes do Java eu construí em **Rust** — `Axum`, `Tokio` e `SQLx` sobre PostgreSQL. É a stack do backend do **PedroRED**, que segue em produção, e de ferramentas próprias que continuam aqui no perfil.
-
-Não é a direção da minha carreira: **meu foco é Java/Spring Boot.** Mas foi onde eu aprendi, na prática, o que um sistema precisa para ficar de pé — migrations versionadas, containers, proxy reverso e um cliente ligando quando cai.
-
-*Before Java I built in Rust — Axum, Tokio and SQLx over PostgreSQL. It still powers PedroRED in production, but Java/Spring Boot is the direction.*
-
-![Rust](https://img.shields.io/badge/Rust-0a0000?style=flat-square&logo=rust&logoColor=ff4b14&labelColor=1a0500)
-![Axum](https://img.shields.io/badge/Axum-0a0000?style=flat-square&logo=rust&logoColor=ff4b14&labelColor=1a0500)
-![Tokio](https://img.shields.io/badge/Tokio-0a0000?style=flat-square&logo=rust&logoColor=ff4b14&labelColor=1a0500)
-
-</details>
-
-<details>
-<summary><b><code>> history | grep -i "servicenow"</code></b></summary>
-<br/>
-
-Estudei **ServiceNow** a sério antes de virar a chave. Continua no cinto de utilidades; só não é o que eu construo aqui.
-
-![ServiceNow](https://img.shields.io/badge/ServiceNow-0a0000?style=flat-square&logo=servicenow&logoColor=ff4b14&labelColor=1a0500)
-
-</details>
-
-<details>
-<summary><b><code>> sobre IA</code></b></summary>
-<br/>
-
-Uso IA na toolchain todo dia e leio cada linha antes de subir — mas **ainda não construí orquestração de LLM em Java**. Está no roadmap, com nome e ordem: Spring AI, RAG e agents, depois de Security e testes.
-
-Prefiro dizer isso a listar um badge que eu não aguente defender numa sabatina.
-
-</details>
+Programo com o Claude Code como par todos os dias, e reviso o código antes de ele entrar.
+No sistema da clínica, escolhi **não** usar LLM nas respostas automáticas, porque o texto das pacientes não deveria sair do servidor.
+Ainda não coloquei orquestração de LLM em produção. Prefiro dizer isso do que exibir um badge que eu não sustentaria numa entrevista.
