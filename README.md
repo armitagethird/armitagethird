@@ -12,7 +12,7 @@ São Luís, MA · remoto
 
 ### `> whoami`
 
-Construo sistemas que tiram trabalho manual das costas de quem toca um negócio, e uso **IA como parte central do meu processo de desenvolvimento**: Claude Code com skills próprias de back-end, front-end e segurança de dados que fui montando ao longo do tempo.
+Construo sistemas que tiram trabalho manual das costas de quem toca um negócio, e uso **IA como parte central do meu processo de desenvolvimento**: um ambiente de Claude Code que montei ao longo do tempo, com skills de segurança, processo e front-end e regras próprias de proteção de dados.
 
 Meu principal projeto é o **sistema de gestão da clínica da Dra. Kerly Helena**, em Java 21 + Spring Boot 4. Ele está **em produção desde outubro de 2026**, com agenda, financeiro e automações de WhatsApp que a equipe usa todo dia. Construí e mantenho o sistema, e ele foi do primeiro commit à produção em 22 dias.
 
@@ -85,16 +85,15 @@ Sistema de gestão para uma clínica de medicina integrativa em São Luís. Trê
 
 ### `> cat como-eu-trabalho-com-ia.md`
 
-O **Claude Code** é minha ferramenta principal de desenvolvimento. Eu não só peço código: monto o ambiente para a IA trabalhar do jeito certo em cada projeto.
+O **Claude Code** é minha ferramenta principal de desenvolvimento. Não fico só pedindo código: montei e mantenho um ambiente para a IA trabalhar do jeito certo em cada projeto.
 
-- **Skills próprias**, que fui criando e refinando com o uso:
-  - **back-end:** <!-- TODO: nomes e o que cada uma impõe -->
-  - **front-end:** <!-- TODO -->
-  - **segurança de dados:** <!-- TODO: ex.: segredos, LGPD, dados de pacientes -->
-- **Contexto de projeto versionado:** `CLAUDE.md` com as armadilhas já encontradas no sistema e specs por funcionalidade em `docs/specs/`, para a IA não repetir erro e eu manter cada decisão rastreável.
+- **Segurança:** skills de auditoria (`vibe-security`, `owasp-security`, `security-best-practices`) e, por cima delas, **regras minhas** no `CLAUDE.md`: controle de acesso no servidor e anti-IDOR, segredo só em variável de ambiente, nunca logar senha, token ou dado pessoal. Nenhuma dessas skills trata LGPD nem dados de saúde, então essa camada eu escrevi no próprio projeto da clínica: não logar telefone, expurgo de dados antigos e a IA proibida de ler o `.env`.
+- **Processo:** `superpowers` (TDD, debugging sistemático, planos, code review) e diretrizes contra os erros comuns de LLM escrevendo código.
+- **Front-end:** skills de design (`design-taste-frontend`, `high-end-visual-design`, `impeccable`) e uma regra minha de como combiná-las: uma de descoberta, duas de execução, no máximo um estilo e uma de revisão.
+- **Contexto de projeto versionado:** `CLAUDE.md` com as armadilhas já encontradas no sistema e specs por funcionalidade em `docs/specs/`, para a IA não repetir erro e cada decisão ficar rastreável.
 - **Vários agentes em paralelo** para tarefas grandes. Exemplo: cinco agentes levantaram a documentação deste sistema lendo o código, e eu conferi as afirmações que mais pesavam.
-- **Ferramenta própria:** o [ClaudeCodeHUD](https://github.com/armitagethird/ClaudeCodeHUD), um HUD em Rust para o Claude Code CLI.
-- **Já integrei LLM num produto:** o **Pronto Vet**, <!-- TODO: 1 linha sobre o que fazia -->, consumindo uma API de IA e construído com o Claude Code.
+- **Ferramenta própria:** o [ClaudeCodeHUD](https://github.com/armitagethird/ClaudeCodeHUD), um HUD em Rust que uso todo dia como status line do Claude Code.
+- **Já integrei IA em produto:** o **Pronto Vet**, um programa que consome uma API de IA, feito com o Claude Code.
 - **Saber quando não usar IA também conta:** no sistema da clínica, as respostas automáticas às pacientes não usam LLM, para o texto delas não sair do servidor.
 
 Não sou especialista em machine learning. Sou um dev de back-end que usa IA todos os dias e já colocou isso para rodar em projeto real.
