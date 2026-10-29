@@ -1,6 +1,6 @@
 # Romero Saraiva
 
-**Backend Java / Spring Boot · sistemas que tiram trabalho manual de negócios reais**
+**Backend Java / Spring Boot · desenvolvimento com IA · sistemas que tiram trabalho manual de negócios reais**
 
 São Luís, MA · remoto
 
@@ -12,7 +12,7 @@ São Luís, MA · remoto
 
 ### `> whoami`
 
-Construo sistemas que tiram trabalho manual das costas de quem toca um negócio.
+Construo sistemas que tiram trabalho manual das costas de quem toca um negócio, e uso **IA como parte central do meu processo de desenvolvimento**: Claude Code com skills próprias de back-end, front-end e segurança de dados que fui montando ao longo do tempo.
 
 Meu principal projeto é o **sistema de gestão da clínica da Dra. Kerly Helena**, em Java 21 + Spring Boot 4. Ele está **em produção desde outubro de 2026**, com agenda, financeiro e automações de WhatsApp que a equipe usa todo dia. Construí e mantenho o sistema, e ele foi do primeiro commit à produção em 22 dias.
 
@@ -32,12 +32,12 @@ Sistema de gestão para uma clínica de medicina integrativa em São Luís. Trê
 
 | Antes | Depois |
 |---|---|
-| Em 17 dias, 13 pacientes mandaram 28 mensagens com dúvidas (como a localização) para o número de avisos, que ninguém monitora | O sistema espera a paciente terminar de escrever e responde pelo assunto: localização com pino, data da consulta, pagamento, convênio, horário. **Sem IA**, de propósito: o texto da paciente não sai do servidor |
-| Saber quem vinha era vasculhar o WhatsApp | Lembrete na véspera e 2h antes em formato de **enquete** ("Confirmo" / "Preciso remarcar") e um painel do dia: confirmadas, aguardando, sem resposta, pediu remarcação |
-| O desenho inicial exigia cadastrar cada horário livre, mas a médica atende quase todo dia | A médica marca só os dias (ou turnos) em que **não** atende, inclusive vários de uma vez |
+| As datas de consulta eram anotadas **no papel** | Agenda digital com a grade do mês e um painel do dia. A médica marca só os dias (ou turnos) em que **não** atende, e o resto fica livre |
+| Lembrar a paciente não bastava: a médica não tinha como saber **quem ia de fato** | Na véspera e 2h antes, a paciente recebe uma **enquete** ("Confirmo" / "Preciso remarcar"). A resposta vira aviso para a equipe e aparece no painel do dia: confirmadas, aguardando, sem resposta, pediu remarcação |
+| As **avaliações no Google** são essenciais para a clínica, mas o link sempre ficava para depois | Depois de cada consulta, o sistema envia sozinho a mensagem de agradecimento com o link de avaliação |
+| A médica respondia o tempo todo a mesma pergunta: **onde fica a clínica** e **quando é a minha consulta**. Em 17 dias, 13 pacientes mandaram 28 mensagens assim para o número de avisos | Quando a paciente escreve, o sistema identifica o assunto e responde, ou manda um **menu em enquete** para ela escolher. Escolheu "localização", recebe o pino da clínica no mapa; escolheu "minha consulta", recebe a data |
 | Risco de duas pacientes no mesmo horário | O **próprio banco** recusa horário sobreposto, mesmo com duas pessoas marcando ao mesmo tempo |
-| A receita só entrava no financeiro se alguém lembrasse de clicar | A receita é lançada sozinha quando a consulta termina |
-| Valor digitado à mão, com risco de erro | Catálogo de serviços com o valor congelado na consulta |
+| A receita só entrava no financeiro se alguém lembrasse de clicar, e o valor era digitado à mão | A receita é lançada sozinha quando a consulta termina, com o valor do catálogo de serviços congelado na consulta |
 | Senha compartilhada, e cancelar ou mudar valor não deixava rastro | Login por código no e-mail, acesso individual e página de atividade ("quem fez o quê") |
 
 **Automações no WhatsApp** (Evolution API)
@@ -55,7 +55,7 @@ Sistema de gestão para uma clínica de medicina integrativa em São Luís. Trê
 - **Webhook fail-closed:** token comparado em tempo constante, corpo limitado a 1 MB, filtro por instância e segredos higienizados antes de gravar o evento.
 - **Login sem senha:** código de 5 dígitos guardado só como hash BCrypt, limite de tentativas por IP + e-mail e tempo de resposta igual para e-mail inexistente.
 - **Agenda esparsa:** só os dias bloqueados viram linha no banco; o resto é livre por padrão.
-- **Respostas automáticas sem LLM:** classificador por palavras com tolerância a erro de digitação (Damerau-Levenshtein), restrita aos assuntos em que ela não gera ambiguidade ("pegar" não pode virar "pagar").
+- **Respostas automáticas sem LLM:** classificador por palavras com tolerância a erro de digitação (Damerau-Levenshtein), restrita aos assuntos em que ela não gera ambiguidade ("pegar" não pode virar "pagar"). O texto da paciente não sai do servidor.
 - **JVM enxuta** para rodar numa VPS de 4 GB junto com o Postgres e a Evolution API.
 - **Testes contra Postgres real**, sem H2 (o H2 não tem `tstzrange` nem `EXCLUDE`), incluindo testes de concorrência com threads.
 
@@ -83,6 +83,24 @@ Sistema de gestão para uma clínica de medicina integrativa em São Luís. Trê
 
 ---
 
+### `> cat como-eu-trabalho-com-ia.md`
+
+O **Claude Code** é minha ferramenta principal de desenvolvimento. Eu não só peço código: monto o ambiente para a IA trabalhar do jeito certo em cada projeto.
+
+- **Skills próprias**, que fui criando e refinando com o uso:
+  - **back-end:** <!-- TODO: nomes e o que cada uma impõe -->
+  - **front-end:** <!-- TODO -->
+  - **segurança de dados:** <!-- TODO: ex.: segredos, LGPD, dados de pacientes -->
+- **Contexto de projeto versionado:** `CLAUDE.md` com as armadilhas já encontradas no sistema e specs por funcionalidade em `docs/specs/`, para a IA não repetir erro e eu manter cada decisão rastreável.
+- **Vários agentes em paralelo** para tarefas grandes. Exemplo: cinco agentes levantaram a documentação deste sistema lendo o código, e eu conferi as afirmações que mais pesavam.
+- **Ferramenta própria:** o [ClaudeCodeHUD](https://github.com/armitagethird/ClaudeCodeHUD), um HUD em Rust para o Claude Code CLI.
+- **Já integrei LLM num produto:** o **Pronto Vet**, <!-- TODO: 1 linha sobre o que fazia -->, consumindo uma API de IA e construído com o Claude Code.
+- **Saber quando não usar IA também conta:** no sistema da clínica, as respostas automáticas às pacientes não usam LLM, para o texto delas não sair do servidor.
+
+Não sou especialista em machine learning. Sou um dev de back-end que usa IA todos os dias e já colocou isso para rodar em projeto real.
+
+---
+
 ### `> stack --list`
 
 **Backend**
@@ -95,6 +113,9 @@ Sistema de gestão para uma clínica de medicina integrativa em São Luís. Trê
 **Dados**
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
 ![Flyway](https://img.shields.io/badge/Flyway-CC0200?style=flat&logo=flyway&logoColor=white)
+
+**IA**
+![Claude Code](https://img.shields.io/badge/Claude_Code-D97757?style=flat&logo=claude&logoColor=white)
 
 **Infra e ferramentas**
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
@@ -142,11 +163,3 @@ Ferramentas que fiz para o meu próprio dia a dia:
 - [ ] CI/CD com GitHub Actions
 - [ ] Orquestração de LLM em Java (Spring AI, RAG, agents)
 - [ ] ServiceNow: retomando os estudos (Now Pro / CSA)
-
----
-
-### `> sobre IA`
-
-Programo com o Claude Code como par todos os dias, e reviso o código antes de ele entrar.
-No sistema da clínica, escolhi **não** usar LLM nas respostas automáticas, porque o texto das pacientes não deveria sair do servidor.
-Ainda não coloquei orquestração de LLM em produção. Prefiro dizer isso do que exibir um badge que eu não sustentaria numa entrevista.
