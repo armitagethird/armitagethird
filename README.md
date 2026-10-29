@@ -6,13 +6,13 @@ São Luís, MA · remoto
 
 [![VibeSurf Dev](https://img.shields.io/badge/VibeSurf_Dev-000000?style=flat&logo=vercel&logoColor=white)](https://vibesurfdev.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/romero-saraiva)
-[![E-mail](https://img.shields.io/badge/E--mail-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:SEU_EMAIL_AQUI)
+[![E-mail](https://img.shields.io/badge/E--mail-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:romerosaraiva4@gmail.com)
 
 ---
 
 ### `> whoami`
 
-Construo sistemas que tiram trabalho manual das costas de quem toca um negócio, e uso **IA como parte central do meu processo de desenvolvimento**: um ambiente de Claude Code que montei ao longo do tempo, com skills de segurança, processo e front-end e regras próprias de proteção de dados.
+Construo sistemas que tiram trabalho manual das costas de quem toca um negócio, e uso **IA como parte central do meu processo de desenvolvimento**: um ambiente de Claude Code que montei ao longo do tempo, com skills de segurança e de processo e regras próprias de proteção de dados.
 
 Meu principal projeto é o **sistema de gestão da clínica da Dra. Kerly Helena**, em Java 21 + Spring Boot 4. Ele está **em produção desde outubro de 2026**, com agenda, financeiro e automações de WhatsApp que a equipe usa todo dia. Construí e mantenho o sistema, e ele foi do primeiro commit à produção em 22 dias.
 
@@ -89,7 +89,6 @@ O **Claude Code** é minha ferramenta principal de desenvolvimento. Não fico s�
 
 - **Segurança:** skills de auditoria (`vibe-security`, `owasp-security`, `security-best-practices`) e, por cima delas, **regras minhas** no `CLAUDE.md`: controle de acesso no servidor e anti-IDOR, segredo só em variável de ambiente, nunca logar senha, token ou dado pessoal. Nenhuma dessas skills trata LGPD nem dados de saúde, então essa camada eu escrevi no próprio projeto da clínica: não logar telefone, expurgo de dados antigos e a IA proibida de ler o `.env`.
 - **Processo:** `superpowers` (TDD, debugging sistemático, planos, code review) e diretrizes contra os erros comuns de LLM escrevendo código.
-- **Front-end:** skills de design (`design-taste-frontend`, `high-end-visual-design`, `impeccable`) e uma regra minha de como combiná-las: uma de descoberta, duas de execução, no máximo um estilo e uma de revisão.
 - **Contexto de projeto versionado:** `CLAUDE.md` com as armadilhas já encontradas no sistema e specs por funcionalidade em `docs/specs/`, para a IA não repetir erro e cada decisão ficar rastreável.
 - **Vários agentes em paralelo** para tarefas grandes. Exemplo: cinco agentes levantaram a documentação deste sistema lendo o código, e eu conferi as afirmações que mais pesavam.
 - **Ferramenta própria:** o [ClaudeCodeHUD](https://github.com/armitagethird/ClaudeCodeHUD), um HUD em Rust que uso todo dia como status line do Claude Code.
@@ -123,12 +122,6 @@ Não sou especialista em machine learning. Sou um dev de back-end que usa IA tod
 ![Maven](https://img.shields.io/badge/Maven-C71A36?style=flat&logo=apachemaven&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
 ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=flat&logo=intellijidea&logoColor=white)
-
-**Front**
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
-![React Router](https://img.shields.io/badge/React_Router-CA4245?style=flat&logo=reactrouter&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
-![Astro](https://img.shields.io/badge/Astro-BC52EE?style=flat&logo=astro&logoColor=white)
 
 ---
 
